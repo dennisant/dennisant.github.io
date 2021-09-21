@@ -87,15 +87,14 @@
 
   <div class="text-center wow fadeInDown wrapmiddle">
     <p class = "lead justified">
-      My research goal is to develop online planning algorithms and systems that enable physical robots to operate intelligently, safely, and efficiently, with provable guarantees. Currently, my research approaches include:<br>
+      My research goal is to investigate the role of dynamic game theory in multi-agent interactive settings such as traffic. Currently, my research approaches include:<br>
 
     </p>
     <ol class = "lead justified">
-      <li>Devising provable and efficient online algorithms for MDPs and POMDPs with continuous and hybrid spaces using importance sampling and continuous multi-armed bandits.</li>
+      <li>Posing interactive motion planning problems as multi-player, noncooperative dynamic games and designing efficient algorithms to solve them.</li>
 
-      <li>Integrating online motion planning under uncertainty with computer vision and machine learning to solve realistic motion planning problems with high dimensional observations.</li>
-
-      <li>Applying motion planning techniques to other domains including nuclear radiation detection with drones and ecological population dynamics control.</li>
+      <li>Inferring properties of game-theoretic interactions, such as equilibrium type, player objectives, and constraints.</li>
+          
     </ol>
     <p class = "lead justified">
       My Google Scholar page is available <a href="https://scholar.google.com/citations?user=9D1HwB8AAAAJ" target="_blank">here</a>. 
@@ -122,24 +121,24 @@
   <div class="wow fadeInDown wraprleft">
     <div class = "text-center"><img class="text-center" src="images/vpw.png" width="100%" style="padding: 0% 0% 5% 0%"></div>
     <p class = "lead2 text-center" style="color:grey">
-      Voronoi progressive widening (VPW) guides the selection of actions to widen the search tree. 
+      Comparison of pinch-point and time-consistent LQ subroutines. In this simplified one-player reach-avoid example, a planar vehicle wishes to eventually reach the small magenta target while avoiding the larger black failure set. 
     </p>
   </div>
   <div class="wow fadeInDown wraprright">
     <p class = "lead justified">
-      <b>Voronoi Progressive Widening: Efficient Online Solvers for Continuous State, Action, and Observation POMDPs. </b><br>
-      <i>Lim, M. H.</i>, Tomlin, C. J., & Sunberg, Z. N. (2020). <i>Will appear at CDC 2021</i>. <br>
-      <a href="https://arxiv.org/abs/2012.10140" target="_blank">[arXiv]</a> (Full ver. with Appendix) / <a href="https://github.com/michael-lim/VOOTreeSearch.jl" target="_blank">[Github]</a>
+      <b>Back to the Future: Efficient, Time-Consistent Solutions in Reach-Avoid Games. </b><br>
+      <i>Dennis R. Anthony</i>, David Fridovich-Keil, & Jaime F. Fisac (2021). <i>submitted to Robotics and Automation Letters</i>. <br>
+      <a href="https://arxiv.org/abs/2109.07673" target="_blank">[arXiv]</a> (Full ver. with Appendix)</a>
     </p>
     <p class = "lead2 justified">
-      This paper introduces Voronoi Progressive Widening (VPW), a generalization of Voronoi optimistic optimization (VOO) and action progressive widening to partially observable Markov decision processes (POMDPs). Tree search algorithms can use VPW to effectively handle continuous or hybrid action spaces by efficiently balancing local and global action searching. This paper proposes two VPW-based algorithms and analyzes them from theoretical and simulation perspectives. Voronoi Optimistic Weighted Sparse Sampling (VOWSS) is a theoretical tool that justifies VPW-based online solvers, and it is the first algorithm with global convergence guarantees for continuous state, action, and observation POMDPs. Voronoi Optimistic Monte Carlo Planning with Observation Weighting (VOMCPOW) is a versatile and efficient algorithm that consistently outperforms state-of-the-art POMDP algorithms in several simulation experiments.
+      We study the class of reach-avoid dynamic games in which multiple agents interact noncooperatively, and each wishes to satisfy a distinct target condition while avoiding a failure condition. Reach-avoid games are commonly used to express safety-critical optimal control problems found in mobile robot motion planning. While a wide variety of approaches exist for these motion planning problems, we focus on finding time-consistent solutions, in which planned future motion is still optimal despite prior suboptimal actions. Though abstract, time consistency encapsulates an extremely desirable property: namely, time-consistent motion plans remain optimal even when a robot's motion diverges from the plan early on due to, e.g., intrinsic dynamic uncertainty or extrinsic environment disturbances. Our main contribution is a computationally-efficient algorithm for multi-agent reach-avoid games which renders time-consistent solutions. We demonstrate our approach in a simulated driving scenario, where we construct a two-player adversarial game to model a range of defensive driving behaviors.
     </p>
   </div>
   <div class="wrapmiddle"><br></div>
 
 
   <!-- POWSS Paper -->
-  <div class="wow fadeInDown wraprleft">
+  <!-- <div class="wow fadeInDown wraprleft">
     <div class = "text-center"><img class="text-center" src="images/powss.jpg" width="70%" style="padding: 0% 0% 5% 0%"></div>
     <p class = "lead2 text-center" style="color:grey">
       POWSS tree schematic diagram for continuous observation POMDPs.
@@ -155,11 +154,11 @@
       Partially observable Markov decision processes (POMDPs) with continuous state and observation spaces have powerful flexibility for representing real-world decision and control problems but are notoriously difficult to solve. Recent online sampling-based algorithms that use observation likelihood weighting have shown unprecedented effectiveness in domains with continuous observation spaces. However there has been no formal theoretical justification for this technique. This work offers such a justification, proving that a simplified algorithm, partially observable weighted sparse sampling (POWSS), will estimate Q-values accurately with high probability and can be made to perform arbitrarily near the optimal solution by increasing computational power.
     </p>
   </div>
-  <div class="wrapmiddle"><br></div>
+  <div class="wrapmiddle"><br></div> -->
 
 
   <!-- Quantum Paper -->
-  <div class="wow fadeInDown wraprleft">
+  <!-- <div class="wow fadeInDown wraprleft">
     <div class = "text-center"><img class="text-center" src="images/quantum.jpg" width="90%" style="padding: 0% 0% 5% 0%"></div>
     <p class = "lead2 text-center" style="color:grey">
       Binder cumulant comparison of thermal and diabatic fit for different ferromagnetic interactions.
@@ -175,11 +174,11 @@
       One broad goal of quantum simulation is to start a simple quantum system in its ground state and slowly evolve the Hamiltonian to a complex one, maintaining the ground state throughout the evolution (called adiabatic state preparation). This provides a natural setting to create a highly entangled and correlated quantum state if the final Hamiltonian supports such a ground state. In ion-trap-based quantum simulations, coherence times are too short to allow for such ground-state evolution for large chains, because the rapid evolution of the system creates excitations to higher energy states. Because the probability for this excitation depends exponentially on the excitation energy and because the thermal distribution also depends exponentially on the excitation energy, we investigate whether this so-called diabatic excitation can create the analog of a thermal distribution; as this could serve as an alternative for creating thermal states of complex quantum systems without requiring contact with a heat bath. In this work, we explore this relationship and determine situations, where diabatic excitation can approximately create thermal states.
     </p>
   </div>
-  <div class="wrapmiddle"><br></div>
+  <div class="wrapmiddle"><br></div> -->
 
 
   <!-- Graph Paper -->
-  <div class="wow fadeInDown wraprleft">
+  <!-- <div class="wow fadeInDown wraprleft">
     <div class = "text-center"><a title="David Eppstein, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Golomb_Lombardi.svg"><img class="text-center" width="60%" style="padding: 0% 0% 5% 0%" alt="Golomb Lombardi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Golomb_Lombardi.svg/256px-Golomb_Lombardi.svg.png"></a></div>
     <p class = "lead2 text-center" style="color:grey">
       Golomb's graph, an example of a unit distance graph in R2.
@@ -195,10 +194,10 @@
       The lower bound for the chromatic number of R4 is improved from 7 to 9. Three graphs with unit distance embeddings in R4 are described. The first is a 7-chromatic graph of order 14 whose chromatic number can be verified by inspection. The second is an 8-chromatic graph of order 26. In this case the chromatic number can be verified quickly by a simple computer program. The third graph is a 9-chromatic graph of order 65 for which computer verification takes about one minute.
     </p>
   </div>
-  <div class="wrapmiddle"><br></div>
+  <div class="wrapmiddle"><br></div> -->
 
 
-  <div class="wow fadeInDown wrapmiddle">
+  <!--<div class="wow fadeInDown wrapmiddle">
     <h4 class="ml-subsubheading">Invited Talks and Poster Presentations</h4>
   </div>
   <div class="wrapmiddle"></div>
@@ -232,7 +231,7 @@
       [Oral Presentation] On the Chromatic Number of R4.
     </p>
   </div>
-  <div class="wrapmiddle"><br></div>
+  <div class="wrapmiddle"><br></div> -->
 
 
   <div class="text-center wow fadeInDown wrapmiddle">
