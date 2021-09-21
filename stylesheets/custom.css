@@ -1,0 +1,142 @@
+/* For Videos */
+
+div.gallery {
+    position: relative;
+    text-align: center;
+}
+
+div.gallery img {
+    margin-top: 12px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+div.gallery .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+div.gallery:hover .overlay {
+  opacity: 0.9;
+}
+
+div.gallery .desc {
+  color: black;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.responsive {
+    padding: 6px;
+    float: left;
+    width: 24%;
+}
+
+.sets {
+    margin-left: 300px;
+}
+
+
+/* For Photos */
+
+.presponsive {
+    padding: 6px;
+    float: left;
+    width: 36%;
+}
+
+@media only screen and (max-width: 1030px) {
+    .responsive {
+        width: 20%;
+    }
+
+    .presponsive {
+        width: 30%;
+    }    
+
+}
+
+@media only screen and (max-width: 991px) {
+    .responsive {
+        width: 48%;
+        margin: 6px 0;
+    }
+
+    .sets {
+        margin-left: 0px;
+    }
+
+
+    div.gallery .overlay {
+      opacity: 0.7;
+    }
+
+    .presponsive {
+        width: 48%;
+        margin: 6px 0;
+    }    
+
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 70%;
+        margin-left:15%;
+    }
+
+    .sets {
+        margin-left:15%;
+    }
+
+    div.gallery .overlay {
+      opacity: 0.7;
+    }
+
+    .presponsive {
+        width: 70%;
+        margin-left:15%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#slideshow { 
+    /*margin: auto; */
+    position: relative; 
+    width: 100%;
+    max-width: 600px;
+    padding: 10px; 
+    margin-bottom: 100%;
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+
+#slideshow > div > .pic { 
+    width: 100%;
+    border-radius: 100%;
+}
